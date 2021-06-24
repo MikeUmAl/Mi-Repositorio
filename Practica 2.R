@@ -42,7 +42,6 @@ vectorComi = DataFlair$Salario+(Salario/10*0.50)
 vectorComi
 
 
-round (sd(mispacientes$GlucemiaBasal),2)
 #caso estadistico
 
 Genero = c("h","m","h","m","h","h","h","m","m","m")
@@ -54,16 +53,16 @@ class(mispacientes)
 View(mispacientes)
 class(Edad)
 #Max
-max(GlucemiaBasal)
+max(mispacientes$GlucemiaBasal)
 #min
-min(Edad)
+min(mispacientes$Edad)
 #media
-mean(Edad)
+mean(mispacientes$Edad)
 #desviacion standar
 sd(mispacientes$GlucemiaBasal)
 #redondeo
 round (sd(mispacientes$GlucemiaBasal),2)
-quantile (GlucemiaBasal)
+quantile (mispacientes$GlucemiaBasal)
 
 #frecuenciaAbsoluta glucemianasal
 FrecuenciaAbsoluta = table(GlucemiaBasal)
@@ -84,3 +83,4 @@ class(Vinculacion_a_Excel)
 View(Vinculacion_a_Excel)
 (Vinculacion_a_Excel$`Empleados x DPTO`)
 hist(Vinculacion_a_Excel$`Empleados x DPTO`, col = c("Blue","Green","Grey","Purple"))
+

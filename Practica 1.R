@@ -65,6 +65,8 @@ Vector2
 Vector3 = c(TRUE, TRUE, FALSE, FALSE)
 Vector3
 
+Shreck = data.frame(Vector1,Vector2,Vector3)
+View(Shreck)
 #vector(true/false)
 a <- c(2001,2004,2007,2010)
 a[c(TRUE, TRUE, FALSE, FALSE)]
