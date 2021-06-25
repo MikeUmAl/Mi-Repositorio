@@ -1,6 +1,7 @@
 #verificar DF
 Productos = data.frame(Productos)
 class(Productos)
+View(Productos)
 #head
 head(Productos)
 
