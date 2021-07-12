@@ -1,3 +1,8 @@
+library("DBI")
+library("odbc")
+library("dbplyr")
+
+
 DB_Northwind <- DBI::dbConnect(odbc::odbc(),
                                 Driver = "SQL Server",
                                 Server = "dbtedamssql.uh.ac.cr",
