@@ -40,14 +40,17 @@ ggplot (data = Empleados, aes (Empleados$Genero,Empleados$ID_Departamento,
 
 #d Funciones
 #1 Select 
-Empleados %>% select(Nombre1,Apellido1,Email)
+CorreoElectronico = select(Empleados,Nombre1,Apellido1,Email)
+View(CorreoElectronico)
 
 #2 filter
-Empleados %>% filter(ID_Empleado==52128)
+FiltroEmpleado = filter(Empleados,ID_Empleado==52128)
+View(FiltroEmpleado)
 
 #3 arrange
-Empleados %>% arrange(Puesto,Fecha_Ingreso,ID_Departamento)
+Organizado = arrange(Empleados,Puesto,Fecha_Ingreso,ID_Departamento)
+View(Organizado)
 
 #4 Group by
-Empleados %>% group_by(Nombre1)%>% summarise((Genero))
-
+Agrupado = Empleados%>% group_by(ID_Empleado)%>% summarise((Genero))
+View(Agrupado)
