@@ -2,7 +2,7 @@ library("DBI")
 library("odbc")
 library("dbplyr")
 
-#a.COnexion a SQL DB ETL, Tabla ETL
+#a.Conexion a SQL DB ETL, Tabla ETL
 DB_ETL<- DBI::dbConnect(odbc::odbc(),
                         Driver = "SQL Server",
                         Server = "dbtedamssql.uh.ac.cr",
@@ -14,7 +14,7 @@ DB_ETL<- DBI::dbConnect(odbc::odbc(),
 Empleados<-dbGetQuery(DB_ETL,"select * from [BD_Empleados]")
 View(Empleados)
 
-#b
+#b plots
 #plot 1 igualdad de genero
 ggplot (data = Empleados, aes (Empleados$Genero,colour=Genero ))+ geom_bar() 
 + labs(x='Igualdad de Genero',y='Cantidad')
@@ -38,7 +38,7 @@ ggplot (data = Empleados, aes (Empleados$Genero,
 ggplot (data = Empleados, aes (Empleados$Genero,Empleados$ID_Departamento, 
                                colour=Genero ))+ geom_boxplot () + labs(x='Genero',y='ID de Departamento')
 
-#d Funciones
+#d Funciones de dplyr
 #1 Select 
 CorreoElectronico = select(Empleados,Nombre1,Apellido1,Email)
 View(CorreoElectronico)
@@ -54,3 +54,15 @@ View(Organizado)
 #4 Group by
 Agrupado = Empleados%>% group_by(ID_Empleado)%>% summarise((Genero))
 View(Agrupado)
+
+#e creacion de Funciones
+#1 Creacion de ID global con  ID_Empleado Empleados y ID_Departamento
+Numero_Global = paste(Empleados$ID_Empleado,Empleados$ID_Departamento)
+View(Numero_Global)
+Global_ID_Emp = mutate(Empleados, ID_Global=Numero_Global)
+View(Global_ID_Emp)
+
+#2Remobrar columna Email por Correo_Electronico
+Global_ID_Emp2 = rename (Global_ID_Emp,Correo_Electronico=Email)
+View(Global_ID_Emp2)
+

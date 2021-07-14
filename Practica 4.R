@@ -22,3 +22,6 @@ ggplot (data = Clientes, aes (Clientes$CustomerID, Clientes$Country)) + geom_poi
 
 ggplot (data = ordenes, aes (ordenes$OrderDate,
                              ordenes$ShippedDate)) + geom_point ()
+
+ 
+ 
