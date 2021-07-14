@@ -16,15 +16,16 @@ View(Empleados)
 
 #b plots
 #plot 1 igualdad de genero
-ggplot (data = Empleados, aes (Empleados$Genero,colour=Genero ))+ geom_bar() 
-+ labs(x='Igualdad de Genero',y='Cantidad')
+ggplot (data = Empleados, aes (Empleados$Genero,colour=Genero ))+ 
+  geom_bar() + labs(x='Igualdad de Genero',y='Cantidad')
 
 #plot 2 Empleados por departamento
-ggplot (data = Empleados, aes (Empleados$Puesto,colour=Puesto))+ geom_bar() 
-+ labs(x='Empleados por departamento',y='Cantidad')
+ggplot (data = Empleados, aes (Empleados$Puesto,colour=Puesto))+ 
+  geom_bar() + labs(x='Empleados por departamento',y='Cantidad')
 
 #plot 3  Distribucion de empleados por ID de departamento
-ggplot (data = Empleados, aes (Empleados$ID_Departamento, colour=ID_Departamento))+ geom_bar()  + labs(x='Empleados por departamento',y='Cantidad')
+ggplot (data = Empleados, aes (Empleados$ID_Departamento, colour=ID_Departamento))+ 
+  geom_bar()  + labs(x='Empleados por ID de departamento',y='Cantidad')
   
 
 #plot 4  Distribucion de genero por ID de departamento
@@ -62,7 +63,7 @@ View(Numero_Global)
 Global_ID_Emp = mutate(Empleados, ID_Global=Numero_Global)
 View(Global_ID_Emp)
 
-#2Remobrar columna Email por Correo_Electronico
+#2Renombrar columna Email por Correo_Electronico
 Global_ID_Emp2 = rename (Global_ID_Emp,Correo_Electronico=Email)
 View(Global_ID_Emp2)
 
