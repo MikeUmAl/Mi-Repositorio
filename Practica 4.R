@@ -17,11 +17,18 @@ View(Clientes)
 ordenes <-dbGetQuery(DB_Northwind,"select * from [orders]")
 View(ordenes)
 
+Northwind<-dbGetQuery(DB_Northwind,"Select * from Orders")
+View(Northwind)
+
 ggplot (data = Clientes, aes (Clientes$CustomerID, Clientes$Country)) + geom_point()
 
 
 ggplot (data = ordenes, aes (ordenes$OrderDate,
                              ordenes$ShippedDate)) + geom_point ()
+
+qplot(ShipCountry, OrderDate, data = Northwind, color=ShipCountry,
+      xlab="Pais", ylab="Fecha de orden", main="Fecha de la orden por pais")
+
 
  
  

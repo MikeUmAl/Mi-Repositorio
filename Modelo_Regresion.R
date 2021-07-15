@@ -1,6 +1,7 @@
 #paso 1
-grasas <- read.table('http://verso.mat.uam.es/
-                     ~joser.berrendero/datos/EdadPesoGrasas.txt', header = TRUE) 
+grasas <- read.table('http://verso.mat.uam.es/~joser.berrendero/datos/EdadPesoGrasas.txt', header = TRUE) 
+
+
 View(grasas)
 names(grasas)
 head(grasas)
