@@ -27,3 +27,9 @@ nuevas_edades = data.frame(edad = seq(30,50))
 #paso 7 calculo de prediccion
 
 predict(Regresion,nuevas_edades)
+
+
+#print
+print(nuevoindicerenta)
+
+print(Regresion2)
