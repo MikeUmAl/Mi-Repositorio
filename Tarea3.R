@@ -115,3 +115,6 @@ barplot(
   sun = "Analisis",
   xlab = "emociones", lab = NULL)
 
+
+
+
