@@ -1,4 +1,5 @@
 #Dataframe CostoVida2020
+#Limpieza de datos
 View(CostoVida2020)
 class(CostoVida2020)
 names(CostoVida2020)
@@ -79,7 +80,7 @@ library(RColorBrewer)
 library(wordcloud)
 library(tm)
 
-#Paso 1 crear texto 
+#Paso 1 crear texto  La muerte en Galdós 
 
 texto_cadena ='Retumbó el disparo en la soledad de aquel abandonado y tenebroso lugar,
 dando terrible salto, hincó la cabeza en la movediza tierra y rodó seco 
@@ -106,15 +107,11 @@ summary(sentimientos_df)
 barplot(
   colSums(prop.table(sentimientos_df[,1:8])),
   space = 0.2,
-  horiz = FALSE,
+  horiz = TRUE,
   las = 1,
   cex.names = 0.7,
   col = brewer.pal(n = 8,  name = "Set3"),
   main = "Situacion",
   sun = "Analisis",
   xlab = "emociones", lab = NULL)
-
-
-
-
 
