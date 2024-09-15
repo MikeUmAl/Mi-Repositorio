@@ -14,7 +14,7 @@ var_Temp1 = select(Groceries_data,Date,itemDescription)
 var_Temp2 = select(Groceries_data,Member_number,day_of_week)
 View(var_Temp1)
 
-#2b operaciones aritméticas
+#2b operaciones aritmÃ©ticas
 max(Groceries_data$Member_number)
 mean(Groceries_data$Date)
 
@@ -68,7 +68,10 @@ round (sd(Ingreso_Unidades_SC),2)
 quantile(Ingreso_Unidades_SC)
 
 #7 investigacion - Stringr(Conjunto de funciones para trabajar con caracteres)
-#Es un paquete para trabajar con un análisis de texto y manipulación de strings en casos.
-#Por ejemplo donde descargamos ese montón de tweets y queremos buscar cierta información 
-#o cuando queremos buscar dentro de la url de las páginas y de todo el texto del html.
+#Es un paquete para trabajar con un anÃ¡lisis de texto y manipulaciÃ³n de strings en casos.
+#Por ejemplo donde descargamos ese montÃ³n de tweets y queremos buscar cierta informaciÃ³n 
+#o cuando queremos buscar dentro de la url de las pÃ¡ginas y de todo el texto del html.
 #https://dominicroye.github.io/es/2020/una-muy-breve-introducci%C3%B3n-a-tidyverse/
+
+
+Nota: 96
